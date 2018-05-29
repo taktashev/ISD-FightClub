@@ -50,6 +50,9 @@ namespace FightClub.Presenters
         int round = 0;
         private void FightPage_Fight(object sender, EventArgs e)
         {
+            if (fightPage.Log.Length != 0)
+                fightPage.Log = "\n\n";
+
             fightPage.Log = "- - - - - Раунд " + ++round + " - - - - -\n";
             
             fightPage.SetRoundSettings(fighter1);
@@ -59,7 +62,7 @@ namespace FightClub.Presenters
             fighter1.GetHit(fighter2.Hit);
             fighter2.GetHit(fighter1.Hit);
 
-            fightPage.Log = RepeatString("- ", 16) + "\n\n";
+            fightPage.Log = RepeatString("- ", 16);
 
             fightPage.Fighter1Hp = fighter1.Hp;
             fightPage.Fighter2Hp = fighter2.Hp;
