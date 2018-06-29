@@ -100,7 +100,8 @@
                     Background="#FFDDDDDD" 
                     FontFamily="Impact"
                     FontSize="24"
-                    FontStyle="Italic"/>
+                    FontStyle="Italic"
+                    Click="FightButton_Click"/>
             <Button x:Name="ReloadGameButton"
                     Content="Ещё!"
                     Width="100"

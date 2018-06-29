@@ -63,11 +63,6 @@ namespace FightClub.Models
             #endregion
 
             FightPresenter fightPresenter = new FightPresenter(this, fighter1, fighter2);
-
-            #region Подписка на события страницы
-            FightButton.Click += FightButton_Click;
-            ReloadGameButton.Click += ReloadGameButton_Click;
-            #endregion
         }
 
         #region Обработка нажатия кнопок страницы
@@ -100,7 +95,6 @@ namespace FightClub.Models
             if (LogTextBox.Text.Length != 0)
                 LogTextBox.ScrollToLine(LogTextBox.LineCount - 2);
         }
-        #endregion
 
         /// <summary>
         /// Устанавливает бойцу блокируемую и атакуемую части тела в соответствии с выбранными RadioButon'ами на форме
@@ -122,5 +116,6 @@ namespace FightClub.Models
             if (BlockLegsRadioButton.IsChecked == true)
                 fighter.Blocked = PartOfTheBody.Legs;
         }
+        #endregion
     }
 }

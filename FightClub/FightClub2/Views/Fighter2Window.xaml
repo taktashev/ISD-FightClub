@@ -1,0 +1,48 @@
+﻿<Window x:Class="FightClub2.Views.Fighter2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FightClub2.Views"
+        mc:Ignorable="d"
+        Title="Бойцовский клуб 2" 
+        Height="360"
+        Width="640"
+        ResizeMode="NoResize"
+        Closed="Window_Closed">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ProgressBar">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Width" Value="600"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/FightBackground.png"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="FighterNameTextBlock"
+                       Text="First user" 
+                       Foreground="#FFDE19A7" 
+                       FontFamily="Impact" 
+                       FontSize="24"
+                       FontStyle="Italic"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock FontFamily="Impact" FontSize="20" FontStyle="Italic"><Run Foreground="#FFDE19A7" Text="HP "/></TextBlock>
+                <TextBlock x:Name="FighterHpTextBlock" FontFamily="Impact" FontSize="20" FontStyle="Italic" Foreground="#FFDE19A7"><Run Text="100"/></TextBlock>
+            </StackPanel>
+            <ProgressBar x:Name="FighterHpProgressBar"
+                         
+                         Foreground="#FFDE19A7"/>
+        </StackPanel>
+    </Grid>
+</Window>
